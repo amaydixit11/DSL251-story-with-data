@@ -26,11 +26,11 @@ function App() {
 
 // Tab Configuration
 const tabs: Tab[] = [
+  { id: 'discovery', name: 'Discovery', icon: <TrendingUp className="w-4 h-4" /> },
   { id: 'time', name: 'Time Analysis', icon: <Clock className="w-4 h-4" /> },
   { id: 'favorites', name: 'Top Content', icon: <Music className="w-4 h-4" /> },
   { id: 'sessions', name: 'Sessions', icon: <Calendar className="w-4 h-4" /> },
   { id: 'correlations', name: 'Correlations', icon: <Network className="w-4 h-4" /> },
-  // { id: 'discovery', name: 'Discovery', icon: <TrendingUp className="w-4 h-4" /> },
   { id: 'clusters', name: 'Clusters', icon: <GitGraph className="w-4 h-4" /> },
 ];
 

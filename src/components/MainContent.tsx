@@ -11,11 +11,11 @@ function MainContent({ activeTab }: {activeTab: string}) {
   return (
     <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       {/* <KeyMetrics /> */}
+      {activeTab === 'discovery' && <DiscoveryAnalysis />}
       {activeTab === 'time' && <TimeSeriesAnalysis />}
       {activeTab === 'favorites' && <FavoritesAnalysis />}
       {activeTab === 'sessions' && <SessionAnalysis />}
       {activeTab === 'correlations' && <CorrelationAnalysis />}
-      {/* {activeTab === 'discovery' && <DiscoveryAnalysis />} */}
       {activeTab === 'clusters' && <ClusteringAnalysis />}
     </main>
   );
