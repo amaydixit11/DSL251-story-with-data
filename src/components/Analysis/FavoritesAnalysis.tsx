@@ -4,19 +4,19 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, BarChart, Bar, Legend, RadialBarChart, RadialBar } from 'recharts';
 
 const topArtists = [
-  { name: "Anuv Jain", plays: 457, peakDate: "2024-06-04", daysPlayed: 112, avgDailyPlays: 1.66, peakPlays: 43 },
-  { name: "Ariana Grande", plays: 399, peakDate: "2024-07-09", daysPlayed: 112, avgDailyPlays: 1.45, peakPlays: 19 },
-  { name: "Pritam", plays: 394, peakDate: "2024-09-24", daysPlayed: 124, avgDailyPlays: 1.43, peakPlays: 17 },
-  { name: "Aditya Rikhari", plays: 393, peakDate: "2024-06-03", daysPlayed: 90, avgDailyPlays: 1.43, peakPlays: 33 },
-  { name: "The Weeknd", plays: 374, peakDate: "2024-05-16", daysPlayed: 104, avgDailyPlays: 1.36, peakPlays: 23 }
+  { name: "Ariana Grande", plays: 659, peakDate: "2025-02-28", daysPlayed: 140, avgDailyPlays: 1.97, peakPlays: 49 },
+  { name: "Anuv Jain", plays: 463, peakDate: "2024-06-04", daysPlayed: 118, avgDailyPlays: 1.39, peakPlays: 43 },
+  { name: "Aditya Rikhari", plays: 408, peakDate: "2024-06-03", daysPlayed: 97, avgDailyPlays: 1.22, peakPlays: 33 },
+  { name: "The Weeknd", plays: 408, peakDate: "2024-05-16", daysPlayed: 121, avgDailyPlays: 1.22, peakPlays: 23 },
+  { name: "Pritam", plays: 404, peakDate: "2024-09-24", daysPlayed: 132, avgDailyPlays: 1.21, peakPlays: 17 },
 ];
 
 const topSongs = [
-  { title: "Faasle", plays: 280, avgDailyPlays: 1.05, peakPlays: 30, daysPlayed: 75, peakDate: "2024-06-03" },
-  { title: "sweet n low", plays: 223, avgDailyPlays: 0.84, peakPlays: 54, daysPlayed: 31, peakDate: "2024-08-09" },
-  { title: "Tu hai kahan", plays: 150, avgDailyPlays: 0.56, peakPlays: 10, daysPlayed: 67, peakDate: "2024-05-02" },
-  { title: "Arcade", plays: 133, avgDailyPlays: 0.50, peakPlays: 24, daysPlayed: 44, peakDate: "2024-04-07" },
-  { title: "Daylight", plays: 125, avgDailyPlays: 0.47, peakPlays: 26, daysPlayed: 34, peakDate: "2024-06-22" }
+  { title: "Faasle", plays: 293, avgDailyPlays: 0.88, peakPlays: 30, daysPlayed: 82, peakDate: "2024-06-03" },
+  { title: "sweet n low", plays: 224, avgDailyPlays: 0.67, peakPlays: 54, daysPlayed: 32, peakDate: "2024-08-09" },
+  { title: "Tu hai kahan", plays: 150, avgDailyPlays: 0.45, peakPlays: 10, daysPlayed: 67, peakDate: "2024-05-02" },
+  { title: "Arcade", plays: 137, avgDailyPlays: 0.41, peakPlays: 24, daysPlayed: 47, peakDate: "2024-04-07" },
+  { title: "Daylight", plays: 136, avgDailyPlays: 0.41, peakPlays: 26, daysPlayed: 43, peakDate: "2024-06-22" }
 ];
 
 const monthlyTrends = [
@@ -28,17 +28,19 @@ const monthlyTrends = [
   { month: "Sep 2024", plays: 269, uniqueArtists: 5, avgPlays: 53.8, topArtist: "The Local train" },
   { month: "Oct 2024", plays: 288, uniqueArtists: 4, avgPlays: 57.6, topArtist: "Shankar Mahadevan" },
   { month: "Nov 2024", plays: 91, uniqueArtists: 4, avgPlays: 18.2, topArtist: "Aditya Rikhari" },
-  { month: "Dec 2024", plays: 74, uniqueArtists: 5, avgPlays: 14.8, topArtist: "Lady Gaga" }
+  { month: "Dec 2024", plays: 74, uniqueArtists: 5, avgPlays: 14.8, topArtist: "Lady Gaga" },
+  { month: "Jan 2025", plays: 120, uniqueArtists: 2, avgPlays: 24.0, topArtist: "Olivia Rodrigo" },
+  { month: "Feb 2025", plays: 100, uniqueArtists: 4, avgPlays: 20.0, topArtist: "Sevdaliza" },
 ];
 
 const loyalArtists = [
-  { name: "Lily Kincade", score: 2.44, playFrequency: 17.8, playsPerDay: 7.31, consistency: 0.07, totalPlays: 234, period: 180 },
-  { name: "Shankar Mahadevan", score: 2.07, playFrequency: 11.9, playsPerDay: 6.17, consistency: 0.08, totalPlays: 179, period: 243 },
-  { name: "Niall Horan", score: 1.92, playFrequency: 24.2, playsPerDay: 5.49, consistency: 0.10, totalPlays: 258, period: 194 }
+  { name: "Lily Kincade", score: 2.37, playFrequency: 16.1, playsPerDay: 7.12, consistency: 0.07, totalPlays: 235, period: 205 },
+  { name: "Shankar Mahadevan", score: 2.07, playFrequency: 11.1, playsPerDay: 6.18, consistency: 0.08, totalPlays: 210, period: 306 },
+  { name: "Ariana Grande", score: 1.76, playFrequency: 42.0, playsPerDay: 5.71, consistency: 0.12, totalPlays: 659, period: 333 }
 ];
 
 const FavoritesAnalysis = () => {
-  const totalPlays = monthlyTrends.reduce((sum, month) => sum + month.plays, 0);
+  const totalPlays = 10362;
   const peakMonth = monthlyTrends.reduce((max, month) => month.plays > max.plays ? month : max);
 
   return (

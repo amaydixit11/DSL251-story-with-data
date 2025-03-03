@@ -14,7 +14,9 @@ const monthlyData = [
   { month: 'Sep', plays: 1015 },
   { month: 'Oct', plays: 1058 },
   { month: 'Nov', plays: 834 },
-  { month: 'Dec', plays: 848 }
+  { month: 'Dec', plays: 848 },
+  { month: 'Jan', plays: 635 },
+  { month: 'Feb', plays: 811 },
 ];
 
 // Real weekly data
@@ -30,36 +32,36 @@ const weeklyData = [
 
 // Real hourly data
 const hourlyData = [
-  { hour: '12 AM', plays: 389 },
-  { hour: '1 AM', plays: 448 },
-  { hour: '2 AM', plays: 302 },
-  { hour: '3 AM', plays: 122 },
-  { hour: '4 AM', plays: 35 },
-  { hour: '5 AM', plays: 33 },
-  { hour: '6 AM', plays: 25 },
-  { hour: '7 AM', plays: 74 },
-  { hour: '8 AM', plays: 121 },
-  { hour: '9 AM', plays: 222 },
-  { hour: '10 AM', plays: 266 },
-  { hour: '11 AM', plays: 285 },
-  { hour: '12 PM', plays: 555 },
-  { hour: '1 PM', plays: 618 },
-  { hour: '2 PM', plays: 690 },
-  { hour: '3 PM', plays: 570 },
-  { hour: '4 PM', plays: 612 },
-  { hour: '5 PM', plays: 586 },
-  { hour: '6 PM', plays: 507 },
-  { hour: '7 PM', plays: 542 },
-  { hour: '8 PM', plays: 577 },
-  { hour: '9 PM', plays: 450 },
-  { hour: '10 PM', plays: 460 },
-  { hour: '11 PM', plays: 427 }
+  { hour: '12 AM', plays: 436},
+  { hour: '1 AM', plays: 472},
+  { hour: '2 AM', plays: 333},
+  { hour: '3 AM', plays: 140},
+  { hour: '4 AM', plays: 35},
+  { hour: '5 AM', plays: 33},
+  { hour: '6 AM', plays: 25},
+  { hour: '7 AM', plays: 113},
+  { hour: '8 AM', plays: 137},
+  { hour: '9 AM', plays: 254},
+  { hour: '10 AM', plays: 292},
+  { hour: '11 AM', plays: 406},
+  { hour: '12 PM', plays: 639},
+  { hour: '1 PM', plays: 700},
+  { hour: '2 PM', plays: 844},
+  { hour: '3 PM', plays: 704},
+  { hour: '4 PM', plays: 674},
+  { hour: '5 PM', plays: 635},
+  { hour: '6 PM', plays: 582},
+  { hour: '7 PM', plays: 642},
+  { hour: '8 PM', plays: 635},
+  { hour: '9 PM', plays: 584},
+  { hour: '10 PM', plays: 578},
+  { hour: '11 PM', plays: 469}
 ];
 
 const timeDistribution = [
   { 
     period: "Morning",
-    plays: 993,
+    plays: 1227,
     percentage: Math.round((993 / 8916) * 100),
     description: "6 AM - 12 PM",
     icon: <Sunrise className="w-6 h-6 text-amber-500" />,
@@ -67,7 +69,7 @@ const timeDistribution = [
   },
   {
     period: "Afternoon",
-    plays: 3631,
+    plays: 4196,
     percentage: Math.round((3631 / 8916) * 100),
     description: "12 PM - 6 PM",
     icon: <Sun className="w-6 h-6 text-orange-500" />,
@@ -75,7 +77,7 @@ const timeDistribution = [
   },
   {
     period: "Evening",
-    plays: 2963,
+    plays: 3490,
     percentage: Math.round((2963 / 8916) * 100),
     description: "6 PM - 12 AM",
     icon: <Sunset className="w-6 h-6 text-indigo-500" />,
@@ -83,7 +85,7 @@ const timeDistribution = [
   },
   {
     period: "Late Night",
-    plays: 1329,
+    plays: 1449,
     percentage: Math.round((1329 / 8916) * 100),
     description: "12 AM - 6 AM",
     icon: <Moon className="w-6 h-6 text-blue-500" />,

@@ -43,7 +43,7 @@ const Header = () => {
               Spotify Listening Analysis
             </h1>
             <p className="mt-1 text-sm sm:text-base text-gray-600">
-              April to December 2024
+              April 2024 to February 2025
             </p>
           </div>
 

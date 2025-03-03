@@ -70,7 +70,7 @@ const DiscoveryAnalysis: React.FC = () => {
         </p>
         <Alert className="bg-blue-50 border-blue-200">
           <AlertDescription>
-            Analysis period: April to December 2024 | Data source: Last.fm integration with Spotify
+            Analysis period: April 2024 to February 2025 | Data source: Last.fm integration with Spotify
           </AlertDescription>
         </Alert>
       </div>
